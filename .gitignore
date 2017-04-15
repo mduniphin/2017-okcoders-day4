@@ -1,0 +1,7 @@
+node_modules/*
+
+<<<<<<< HEAD
+node-js-getting-started/*
+=======
+node-js-getting-started/*
+>>>>>>> daae0d80107b14c841ab6773b83b91c0900720fc
