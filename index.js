@@ -18,10 +18,11 @@ function send(req, res, next) {
 }
 
 server.get('/', send);
-server.get('/hello/:test', send);
-server.put('/hello/:test', send);
-server.del('/hello/:test', function(req, res, next) {
-	res.send(req.params.test + " is now gone...deleted");
+server.get('/hello/:name', send);
+server.put('/hello/:name', send);
+server.POST('/hello/:stuff', function(req, res, next) {
+	res.send(201, req.params.test + "'s random String is: " +
+		Math.random().toString(36).substr(3,8));
 	return next();
 });
 
