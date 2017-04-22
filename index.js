@@ -3,11 +3,11 @@ var server = restify.createServer();
 var port = 8088;
 
 var hello = require('./routes/hello.js');
-var emails = require('./routes/emails.js')
+var emails = require('./routes/emails.js');
 var client = require('./client');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/test')
+mongoose.connect('mongodb://localhost:27017/enron')
 var db = mongoose.connection;
 
 db.on('error', function(msg){
