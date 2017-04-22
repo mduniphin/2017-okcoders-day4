@@ -4,6 +4,8 @@ var port = 8088;
 
 var hello = require('./routes/hello.js');
 var emails = require('./routes/emails.js');
+var fields = require('./routes/fields.js');
+var subject = require('./routes/subject.js');
 var client = require('./client');
 
 var mongoose = require('mongoose');
@@ -23,6 +25,8 @@ server.get('/', client.get);
 
 // Server responses
 server.get('/emails', emails.get);
+server.get('/emails/fields', fields.get);
+server.get('/emails/subject', subject.get);
 server.get('/hello/:name', hello.send);
 server.put('/hello/:name', hello.send);
 server.post('/hello/:name', hello.post);

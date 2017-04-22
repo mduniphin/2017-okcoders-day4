@@ -6,7 +6,7 @@ exports.send = function(req, res, next){
 }
 
 exports.post = function(req, res, next){
-	res.send(201, req.params.test + "'s random String is: " +
+	res.send(201, req.params.name + "'s random String is: " +
 		Math.random().toString(36).substr(3,8));
 	return next();
 }
