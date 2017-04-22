@@ -12,6 +12,6 @@ exports.post = function(req, res, next){
 }
 
 exports.del = function(req, res, next){
-	res.send(req.params.name + "is now gone... deleted");
+	res.send(req.params.name + " is now gone... deleted");
 	return next();
 }
